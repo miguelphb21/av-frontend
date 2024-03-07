@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+/* MOD - RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MOD - HEADER*/
+
+.main-header{
+    /* =Adiciona imagem no fundo do código= */
+    background-image: url(images/background-image.png); 
+    /* -Alinha os elementos do eixo x e y*- /
+    background-position: 50% 39%;
+    /* -Colocar elementos centralizado- */
+    display: flex;
+    /* -alinha os elementos um embaixo do outro- */
+    flex-direction:column ;
+    /* -Alinha os elementos no centro- */
+    align-items: center;
+}
+.main-nav{
+    /*Ocupar toda área dísponivel*/
+    width: 100%;
+    /*trava a largura máxima que definir para o projeto*/
+    max-width: 600px;
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
+    padding: 0 16px;
+}
+
+.header-list-container{
+    /*Colocar os elementos na mesma linha*/
+    display: flex;
+    /*Adicionar espaçamento entre os itens*/
+    justify-content: space-between;
+    /*Garantir que os itens estejam alinhados*/
+    align-items: center;
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
+    padding: 16px 0;
+}
+.nav-item{
+    /*Remove o estilos da lista == BOLINHA == */
+    list-style-type: none;
+    /*Deixa todas as letras em MAIÚSCULO*/
+    text-transform: uppercase;
+
+    color: #00008B;
+}
+hr{
+    /*Faz a linha ocupar 100% da horizontal do site*/
+    width: 100%;
+}
+.nav-item a{
+    /*remove o underline da âncora*/
+    text-decoration: none;
+    /*Herda o cor do elemento pai (neste caso é o nav-item)*/
+    color: inherit;
+}
+.nav-item:hover{
+    /*Quando passamos o mouse em cima a sua cor troca / RGBA passa a cor e no final */
+    color: rgba(0,0,139, 0.7);
+    transition: 0.2s;
+}
