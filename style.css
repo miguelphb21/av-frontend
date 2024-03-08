@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
 
 /* MOD - RESET */
 *{
@@ -24,10 +24,6 @@
 .main-nav{
     /*Ocupar toda área dísponivel*/
     width: 100%;
-    /*trava a largura máxima que definir para o projeto*/
-    max-width: 600px;
-    /*primeiro é cima e baixo, depois é esquerda e direita*/
-    padding: 0 16px;
 }
 
 .header-list-container{
@@ -62,4 +58,35 @@ hr{
     /*Quando passamos o mouse em cima a sua cor troca / RGBA passa a cor e no final */
     color: rgba(0,0,139, 0.7);
     transition: 0.2s;
+}
+.main-about{
+    /**/
+    padding: 40px 0 64px;
+}
+.container{
+    /*trava a largura máxima que definimos para o projeto*/
+    max-width: 600px;
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
+    padding: 0 16px;
+    /*irá forçar a centralizar o objeto do site*/
+    margin: 0 auto;
+}
+.about-title{
+    /*Após o uso de uma fonte seria muito bom colocar outra, se no caso o sistema não encontrar a 1° opção,haverá a 2°*/
+    font-family:  "roboto",cursive;
+    /*tamanho da fonte*/
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+.about-image{
+    /*alinha a imagem a esquerda*/
+    float: left;
+    margin: 0 20px 10px 0; /*0 Topo, 20 direita ,10 baixo e 0 a esquerda*/
+    /*diminuir os tamanhos das imagens*/
+    /*largura*/
+    width: 200px;
+    /*Evita a distorção da imagem*/
+    height: auto;
 }
