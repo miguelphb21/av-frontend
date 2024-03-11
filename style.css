@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
 
+/*Criação de Variável no root do CSS*/
+:root{
+    --blue: #00008B;
+    --gray: #555555;
+    --skyblue: #00BFFF;
+    --silver: #C0C0C0;
+    --red: #ff0000;
+    --white: #ffffff;
+    --darkgray: #959595;
+}
+
 /* MOD - RESET */
 *{
     margin: 0;
@@ -7,6 +18,9 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style: none;
+}
 /* MOD - HEADER*/
 
 .main-header{
@@ -37,11 +51,9 @@
     padding: 16px 0;
 }
 .nav-item{
-    /*Remove o estilos da lista == BOLINHA == */
-    list-style-type: none;
     /*Deixa todas as letras em MAIÚSCULO*/
     text-transform: uppercase;
-
+    /*Muda a cor da letra*/
     color: #00008B;
 }
 hr{
@@ -53,6 +65,7 @@ hr{
     text-decoration: none;
     /*Herda o cor do elemento pai (neste caso é o nav-item)*/
     color: inherit;
+    color: var(--blue)
 }
 .nav-item:hover{
     /*Quando passamos o mouse em cima a sua cor troca / RGBA passa a cor e no final */
@@ -89,4 +102,51 @@ hr{
     width: 200px;
     /*Evita a distorção da imagem*/
     height: auto;
+}
+.about-description{
+    /*utiliza a varialvel de cor no root*/
+    color: var(--gray);
+    /*justifica o texto dexando retinho.*/
+    text-align: justify;
+}
+
+.main-footer{
+    /*Aplicar cor no fundo no rodapé*/
+    background-color: var(--skyblue);
+    /*cria um espaçamento no seu objeto do footer*/
+    /*Primeiro cima baixo,depois a esq e dir*/
+    padding: 15px 0;
+}
+.main-footer-container{
+    /*Deixa o elemento flexível*/
+    display: flex;
+    /*Alinha os itens no centro do Elemento*/
+    align-items: center;
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
+    justify-content: space-between;
+}
+.title-smaller{
+    /*Muda a fonte do seu site*/
+    font-family: "Raleway", sans-serif;
+    /*Aplica a cor nas letras usando a variável*/
+    color: var(--blue); 
+    /*Aumenta o tamanho da fonte*/
+    font-size: 26px;/
+}
+.list-container{
+    /*Abre a disponibilidade de espaço no site*/
+    display: flex;
+    /*Alinha os objetos no centro*/
+    align-items: center;
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
+    justify-content: space-between;
+}
+.footer-item{
+    width: 50px;
+    height: 50px;
+    padding: 15px 0;
+}
+.footer-item + .footer-item{
+    /*Aplicana mesma class seguindo a diante, ate chegar em um elemento*/
+    margin-left: 16px;
 }
