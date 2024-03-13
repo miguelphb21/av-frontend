@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
 
 /*Criação de Variável no root do CSS*/
 :root{
@@ -17,6 +17,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    /*Dar fonte a todo body, com peso regular 400 e tamanho 22, caso nao ache  a fonte importada ultiliza a fonte secundaria*/
+    font: 400 22px "Roboto", sans-serif; 
+}
 
 li{
     list-style: none;
@@ -25,7 +29,7 @@ li{
 
 .main-header{
     /* =Adiciona imagem no fundo do código= */
-    background-image: url(images/background-image.png); 
+    background-image: url(background-image.png); 
     /* -Alinha os elementos do eixo x e y*- /
     background-position: 50% 39%;
     /* -Colocar elementos centralizado- */
@@ -84,7 +88,7 @@ hr{
     /*irá forçar a centralizar o objeto do site*/
     margin: 0 auto;
 }
-.about-title{
+.title-median{
     /*Após o uso de uma fonte seria muito bom colocar outra, se no caso o sistema não encontrar a 1° opção,haverá a 2°*/
     font-family:  "roboto",cursive;
     /*tamanho da fonte*/
@@ -133,7 +137,7 @@ hr{
     /*Aumenta o tamanho da fonte*/
     font-size: 26px;/
 }
-.list-container{
+.footer-container{
     /*Abre a disponibilidade de espaço no site*/
     display: flex;
     /*Alinha os objetos no centro*/
@@ -249,5 +253,48 @@ textarea.contact-field {
     margin-left: auto; 
     /*empurra o mapa para baixo*/
     padding-bottom: 20px;  
+}
 
+/*Index*/
+.title-header{
+    /*Utilizar fonte importada do google fonts*/
+    font-family: "Madimi One" , cursive;
+    /*Coloração da letra*/
+    color: var(--blue); 
+    /*Tamanho da fonte*/
+    font-size: 38px; 
+    /*Espaçamento inferior*/
+    padding-bottom: 10px;
+}
+.title-larger{
+    /*utiliza a fonte importada do google fonts*/
+    font-family: "Rock Salt", cursive;
+    /*Altera o tamanho das letras*/
+    font-size: 38px;
+    /*coloração das letras Utilizando Variável*/
+    color: var(--blue);
+    /*Centraliza as Palavras no Centro do espaço do elemento*/
+    text-align: center;
+}
+.description{
+    /*Centraliza os Textos*/
+    text-align: center;
+    /*Cor da Letra*/
+    color: var(--gray);
+    /*Cria um Espaçamento Abaixo do Texto*/
+    padding-bottom: 10px;
+}
+.emphasis{
+    /*Altera a Cor do Fundo*/
+    background-color: var(--skyblue);
+    /*Altera a cor da letra*/
+    color: var(--blue);
+    /*Arredonda a borda*/
+    border-radius: 25px;
+}
+.product-container{
+    display:flex ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 }
