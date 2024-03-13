@@ -1,115 +1,123 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-Br">
     <head>
-        <!--DADOS PARA O NAVEGADOR-->
+        <!--Dados para o Navegador-->
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
         <meta name="description" content="Programador Front-End, Senai.">
         <meta name="keywords" content="HTML, CSS, JavaScript, Senai">
-        <meta name="author" content="Minguel Sousa"> 
-        <!--título do texto-->
+        <meta name="author" content="Naryara Diniz"> 
+        <!--Titulo do Site-->
         <title>Vendas Livres Store | Contato</title>
-        
-        <!--Links-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="images/35594.svg" type="image/x-icon">
-    </head>
 
-    <!--Area do Site-->
+        <!--Links-->
+        <link rel="shortcut icon" href="images/35594.svg" type="image/x-svg">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <!--Area do site-->
+
     <body>
-        
-            <!--Cabeçalho-->
-        <header>
-            
-                <!--Navegação-->
-            <nav>
-                
-                <!--Lista Não Ordenada-->
-                <ul>
-                        <!--Item da lista-->
-                    <li>
-                            <!--Logo do Site-->
+        <!--Cabeçalho-->
+        <header class="main-header">
+            <!--Navegação-->
+            <nav class="main-nav container">
+                <!--Lista não ordenada-->
+                <ul class="header-list-container">
+                    <!--Item da lista-->
+                    <li class="nav-item"><!--Logotipo-->
                         <a href="index.html">
-                            <img src="images/logo.png" alt="logo" height="100px" height="100px"></a>
+                            <img src="images/logo.png" alt="logo" height="100" width="100">
+                        </a>
                     </li>
-                      
-                    <li>
+                    <li class="nav-item">
                         <a href="loja.html">Loja</a>
                     </li>
-            
-                    <li>
+
+                    <li class="nav-item">
                         <a href="contato.html">Contato</a>
                     </li>
-                    
-                    <li>
-                        <a href="sobre.html">cobre</a>
+
+                    <li class="nav-item">
+                        <a href="sobre.html">Sobre</a>
                     </li>
+
                 </ul>
-            
+
             </nav>
-        <hr>
+            <hr>
+
         </header>
         <main>
-            <h2>Contato</h2>
-            <p>Os campos com * são de preenchimento obrigatório!</p>
-            <!--Corpo do Formulário-->
-            <form >
-                <!--campos do formulário-->
-                <label >
+            <h2 class="title-median">Contato</h2>
+            <p class="contact-text">Os campos com * são de preenchimento obrigatório!</p>
+            <form class="contact">
+
+                <label class="contact-label">
                     Nome*
-                    <input type="text" required>
+                    <input class="contact-field" type="texto" required>
                 </label>
-                <label >
-                    Email*
-                    <input type="email" required>
+
+                <label class="contact-label">
+                    E-mail*
+                    <input class="contact-field" type="email" required>
                 </label>
-                <label >
+
+                <label class="contact-label">
                     Assunto*
-                    <select >
+                    <select class="contact-field">
+                        <option>NewsLetter</option>
                         <option>Dúvidas</option>
                         <option>Sugestões</option>
                         <option>Críticas</option>
                     </select>
                 </label>
-                <label >
-                    Mensagem*
-                    <textarea required></textarea>
-                    <button type="button">Enviar</button>
-                </label>
-            </form>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.649702481129!2d-41.73860852412353!3d-2.9167229395837375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec2534a94ff3d9%3A0xa49b7f5f17e05eb8!2sR.%20Cel.%20Manoel%20Antonio%20da%20Silva%2C%2025%20-%20Frei%20Higino%2C%20Parna%C3%ADba%20-%20PI!5e0!3m2!1spt-BR!2sbr!4v1709730610512!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </main>
-        <footer>
-            <div>
-            <h3>Vendas Livres Store - Hilton Elias 2024</h3>
-            <ul>
-                <li>
-                <a href="http://www.facebook.com/" target="_blank">
-                    <img src="images/facebook.svg" alt="Facebook logo">
-                </a>
-                </li>
-                <li>
-                    <a href="http://www.spotify.com/" target="_blank">
-                        <img src="images/spotify.svg" alt="Facebook logo">
-                    </a>
-                </li>
 
-                <li>
-                    <a href="http://www.instagram.com/" target="_blank">
-                        <img src="images/instagram.svg" alt="Facebook logo">
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="http://www.youtube.com/" target="_blank">
-                        <img src="images/youtube.svg" alt="Facebook logo">
-                    </a>
-                </li>
-            </ul>
+                <label class="contact-label">
+                    Mensagem*
+                    <textarea class="contact-field" required></textarea>
+                </label>
+
+                <button class="button-form" type="button">Enviar</button>
+               
+            </form>
+
+            <div class="contact-maps">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.639137520176!2d-41.76899472430771!3d-2.919703039594578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec30040e50c78d%3A0x4b4af7c8b92e2d13!2sR.%20Tr%C3%AAs%20de%20Maio%2C%201573%20-%20Sao%20Francisco%2C%20Parna%C3%ADba%20-%20PI%2C%2064215-863!5e0!3m2!1spt-BR!2sbr!4v1709729708085!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+
+            <div class="footer-container">
+                <!--Texto de nivel 3-->
+                <h3 class="title-smaller">Vendas Livres Store- Naryara Diniz 2024 </h3>
+
+                <ul class="footer-container">
+
+                    <li class="footer-item">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <img src="images/facebook.svg" alt="Facebook logo"></a>
+                    </li>
+
+                    <li  class="footer-item">
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <img src="images/instagram.svg" alt="Instagran logo"></a>
+                    </li>
+
+                    <li  class="footer-item">
+                        <a href="https://www.spotify.com/" target="_blank">
+                            <img src="images/spotify.svg" alt="Spotify logo"></a>
+                    </li>
+
+                    <li class="footer-item">
+                        <a href="https://www.youtube.com/" target="_blank">
+                            <img src="images/youtube.svg" alt="YouTube logo"></a>
+                    </li>
+                </ul>
             </div>
         </footer>
-    </body>
-</html>
+
+
     </body>
 </html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #00008b;
+    --gray: #555555;
+    --skyblue: #00bfff;
+    --silver: #c0c0c0;
+    --red: #ff0000;
+    --white: #ffffff;
+    --darkgray: #959595;
+}
+
+body {
+    font: 400 22px "Roboto", sans-serif; /*Dar fonte a todo body, com peso regular 400 e tamanho 22, caso nao ache  a fonte importada ultiliza a fonte secundaria*/
+}
+
+li{
+    list-style-type: none; /*retira as bolinhas dos elementos*/
+}
+
+/*Header*/
+
+.main-header {
+    background-image: url(background-image.png);/*adicionar a imagem no fundo do topo*/
+    background-position: 50% 39%;/*alinha os elementos nos eixos x e y*/
+    display: flex;/*colocar os elementos centralizados*/
+    flex-direction: column;/*alinha os elementos um embaixo do outro*/
+    align-items: center;/*centralizar os elementos*/
+}
+
+.main-nav {
+    width: 100%;/*ocupar toda a area disponivel*/
+    
+}
+
+.header-list-container {
+    display: flex;/*colocar os elementos na mesma linha*/
+    justify-content: space-between;/*adiciona um espaçamento entre os itens*/
+    align-items: center;/*garantir que fiquem alinhados na mesma linha*/
+    padding: 16px 0;/*primeiro é esquerda e direita, segundo cima e baixo*/
+}
+    
+.nav-item {
+
+    text-transform: uppercase;/*deixar todas as letras em maiusculo*/
+    color: var(--blue);
+}
+
+hr {
+    width: 100%;/*ocupar toda area disponivel*/
+}
+
+.nav-item a {
+    text-decoration: none;/*remove o underline do ancora*/
+    color: inherit;/*herda a or do elemento pai (neste caso é o nav-item)*/
+}
+
+.nav-item:hover {
+    color: rgba(0, 0, 139, 0.7);/*quando passar o mouse troca a cor / rgba passa a cor e no final*/
+    transition: 0.2s;
+}
+
+.main-about {
+    padding: 40px 0 64px;
+}
+
+.container {
+    max-width: 600px; /*trava a a largura maxima de um que definimos para o projeto*/
+    padding: 0 16px; /*primeiro cima/baixo, segundo esquerda/direita*/
+    margin: 0 auto; /*não aplica cima/baixo, o auto deistribui o maximo para direita e esquerda*/
+    
+}
+.title-median {
+    font-family: "Raleway",sans-serif; /*pega a fonte importada, caso ele não encontre ultiliza a sans- serifi*/
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.about-image {
+    float: left; /*Alinha a imagem a esquerda e o texto a direita*/
+    margin: 0 20px 10px 0; /*o topo, 20 direita, 10 baixo e 0 esquerda*/
+    width: 200px; /*largura*/
+    height: auto; /*evita a distorçao da imagem*/
+}
+
+.about-description {
+    color: var(--gray); /*utiliza variavel de cor criando no root*/
+    text-align: justify; /*justificaa o texto*/
+}
+
+/*Footer*/
+.main-footer {
+    background-color: var(--skyblue); /*aplica cor no fundo do rodapé*/
+    padding: 15px 0; /*aplica o espaçamento 15px cima/baixo e 0 esquerda/direita*/
+}
+
+.footer-container {
+    display: flex; /*deixar tudo na mesma linha*/
+    align-items: center; /* alinha todos os elementos*/
+    justify-content:space-between /* colar nome de um lado e lista de icones do outro*/
+}
+
+.title-smaller {
+    font-family: "Raleway", sans-serif; /* pegar a fonte importada*/
+    color: var(--blue); /*aplica cor com a variavel criada no root no CSS*/
+    font-size: 26px; /*aumenta o tamanho da fonte*/
+
+}
+
+
+.footer-item { 
+    width: 50px;
+    height: 50px;
+    padding: 15px 0; /*aplica espaçamento 15px cima/baixo e 0 esquerda/direita*/
+}
+
+.footer-item + .footer-item {
+    margin-left: 16px; /*Aplica na mesma class seguindo em diante, ate chegar seguindo em um elemento pai*/
+}
+
+/* Contato*/
+
+.contact-text {
+    text-align: center; /*Alinhha o texto*/
+    margin-bottom: 30px; /*Separa o paragrafo do formulário*/
+    font-size: 28px; /* Altera o tamanho da fonte*/
+    color: var(--gray); /*altera a cor do texto*/
+}
+
+.contact{
+    background-color: var(--skyblue); /* cor do fundo do formulario*/
+    padding: 30px; /*espaçamento*/
+    max-width: 600px; /*tamanho frfinifo para o projeto*/
+    margin-right: auto; /*empura para direita*/
+    margin-left: auto; /*empura para esquerda*/
+    margin-bottom: 20px; /*espaçamento  para baixo*/
+}
+
+.contact-label{
+    display: block; /*coloca os elementos um em cima do outro*/
+    margin-bottom: 20px; /*espaçamento  para baixo*/
+    color: var(--blue); /*altera a cor do texto*/
+}
+
+.contact-field {
+    display:block; /*coloca os elementos um em cima do outro*/
+    width: 100%; /*ocupa o mespaço maximo disponivel*/
+    height: 30px; /* aumenta a altura do campo*/
+    font-size: 16px; /* Altera o tamanho da fonte*/
+    padding-left: 10px; /* empurra o elemento de dento do campo para a esquerda*/
+    border: none; /*Remove a borda*/
+}
+
+.contact-field:focus { /*Troca a cor do fundo da area do formulário ao clicar*/
+    background-color: var(--silver); /* cor do fundo */
+    outline: none; /*remove a linha interna do campo do formulário*/
+}
+
+textarea.contact-field {
+    height: 150px; /* aumenta a altura do campo*/
+    padding: 10px; /*espaçamento em todas as direçoes*/
+    font-family: "Roboto", calibri; /* Utiliza fonte importada, caso caso ele não encontre ultiliza a secundaria*/
+}
+
+.button-form {
+    background-color: var(--blue); /*cor do fundo do botão*/
+    color: var(--white); /*cor da fonte  botão*/
+    border: 2px solid var(--blue); /* Adiciona borda ao botão*/
+    border-radius: 10px; /* Arredonda as bordas do botão*/
+    padding: 2px 6px; /* aumenta o botão 2 para cima/baixo e 6 esquerda/direita*/
+    font-weight: bold; /* aumenta o peso da fonte, deixa ela mais espeça*/
+    cursor: pointer; /*modifica o cursor*/
+}
+
+.button-form:hover {
+    background-color: var(--white); /*cor do fundo do botão*/
+    color: var(--blue); /*cor da fonte  botão*/
+}
+
+.contact-maps {
+    width: 600px;
+    margin-right:auto; /*empura para direita*/
+    margin-left: auto; /*empura para esquerda*/
+    padding-bottom: 20px;  /*empurra o mapa para baixo*/
+
+}
