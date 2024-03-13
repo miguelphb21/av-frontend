@@ -157,18 +157,15 @@ hr {
     padding-left: 10px; /* empurra o elemento de dento do campo para a esquerda*/
     border: none; /*Remove a borda*/
 }
-
 .contact-field:focus { /*Troca a cor do fundo da area do formulário ao clicar*/
     background-color: var(--silver); /* cor do fundo */
     outline: none; /*remove a linha interna do campo do formulário*/
 }
-
 textarea.contact-field {
     height: 150px; /* aumenta a altura do campo*/
     padding: 10px; /*espaçamento em todas as direçoes*/
     font-family: "Roboto", calibri; /* Utiliza fonte importada, caso caso ele não encontre ultiliza a secundaria*/
 }
-
 .button-form {
     background-color: var(--blue); /*cor do fundo do botão*/
     color: var(--white); /*cor da fonte  botão*/
@@ -178,16 +175,13 @@ textarea.contact-field {
     font-weight: bold; /* aumenta o peso da fonte, deixa ela mais espeça*/
     cursor: pointer; /*modifica o cursor*/
 }
-
 .button-form:hover {
     background-color: var(--white); /*cor do fundo do botão*/
     color: var(--blue); /*cor da fonte  botão*/
 }
-
 .contact-maps {
     width: 600px;
     margin-right:auto; /*empura para direita*/
     margin-left: auto; /*empura para esquerda*/
     padding-bottom: 20px;  /*empurra o mapa para baixo*/
-
 }
