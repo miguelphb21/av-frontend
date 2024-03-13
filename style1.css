@@ -1,187 +1,253 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-:root {
-    --blue: #00008b;
+/*Criação de Variável no root do CSS*/
+:root{
+    --blue: #00008B;
     --gray: #555555;
-    --skyblue: #00bfff;
-    --silver: #c0c0c0;
+    --skyblue: #00BFFF;
+    --silver: #C0C0C0;
     --red: #ff0000;
     --white: #ffffff;
     --darkgray: #959595;
 }
 
-body {
-    font: 400 22px "Roboto", sans-serif; /*Dar fonte a todo body, com peso regular 400 e tamanho 22, caso nao ache  a fonte importada ultiliza a fonte secundaria*/
+/* MOD - RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 li{
-    list-style-type: none; /*retira as bolinhas dos elementos*/
+    list-style: none;
+}
+/* MOD - HEADER*/
+
+.main-header{
+    /* =Adiciona imagem no fundo do código= */
+    background-image: url(images/background-image.png); 
+    /* -Alinha os elementos do eixo x e y*- /
+    background-position: 50% 39%;
+    /* -Colocar elementos centralizado- */
+    display: flex;
+    /* -alinha os elementos um embaixo do outro- */
+    flex-direction:column ;
+    /* -Alinha os elementos no centro- */
+    align-items: center;
+}
+.main-nav{
+    /*Ocupar toda área dísponivel*/
+    width: 100%;
 }
 
-/*Header*/
-
-.main-header {
-    background-image: url(background-image.png);/*adicionar a imagem no fundo do topo*/
-    background-position: 50% 39%;/*alinha os elementos nos eixos x e y*/
-    display: flex;/*colocar os elementos centralizados*/
-    flex-direction: column;/*alinha os elementos um embaixo do outro*/
-    align-items: center;/*centralizar os elementos*/
+.header-list-container{
+    /*Colocar os elementos na mesma linha*/
+    display: flex;
+    /*Adicionar espaçamento entre os itens*/
+    justify-content: space-between;
+    /*Garantir que os itens estejam alinhados*/
+    align-items: center;
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
+    padding: 16px 0;
 }
-
-.main-nav {
-    width: 100%;/*ocupar toda a area disponivel*/
-    
+.nav-item{
+    /*Deixa todas as letras em MAIÚSCULO*/
+    text-transform: uppercase;
+    /*Muda a cor da letra*/
+    color: #00008B;
 }
-
-.header-list-container {
-    display: flex;/*colocar os elementos na mesma linha*/
-    justify-content: space-between;/*adiciona um espaçamento entre os itens*/
-    align-items: center;/*garantir que fiquem alinhados na mesma linha*/
-    padding: 16px 0;/*primeiro é esquerda e direita, segundo cima e baixo*/
+hr{
+    /*Faz a linha ocupar 100% da horizontal do site*/
+    width: 100%;
 }
-    
-.nav-item {
-
-    text-transform: uppercase;/*deixar todas as letras em maiusculo*/
-    color: var(--blue);
+.nav-item a{
+    /*remove o underline da âncora*/
+    text-decoration: none;
+    /*Herda o cor do elemento pai (neste caso é o nav-item)*/
+    color: inherit;
+    color: var(--blue)
 }
-
-hr {
-    width: 100%;/*ocupar toda area disponivel*/
-}
-
-.nav-item a {
-    text-decoration: none;/*remove o underline do ancora*/
-    color: inherit;/*herda a or do elemento pai (neste caso é o nav-item)*/
-}
-
-.nav-item:hover {
-    color: rgba(0, 0, 139, 0.7);/*quando passar o mouse troca a cor / rgba passa a cor e no final*/
+.nav-item:hover{
+    /*Quando passamos o mouse em cima a sua cor troca / RGBA passa a cor e no final */
+    color: rgba(0,0,139, 0.7);
     transition: 0.2s;
 }
-
-.main-about {
+.main-about{
+    /**/
     padding: 40px 0 64px;
 }
-
-.container {
-    max-width: 600px; /*trava a a largura maxima de um que definimos para o projeto*/
-    padding: 0 16px; /*primeiro cima/baixo, segundo esquerda/direita*/
-    margin: 0 auto; /*não aplica cima/baixo, o auto deistribui o maximo para direita e esquerda*/
-    
+.container{
+    /*trava a largura máxima que definimos para o projeto*/
+    max-width: 600px;
+    /*primeiro é cima e baixo, depois é esquerda e direita*/
+    padding: 0 16px;
+    /*irá forçar a centralizar o objeto do site*/
+    margin: 0 auto;
 }
-.title-median {
-    font-family: "Raleway",sans-serif; /*pega a fonte importada, caso ele não encontre ultiliza a sans- serifi*/
+.about-title{
+    /*Após o uso de uma fonte seria muito bom colocar outra, se no caso o sistema não encontrar a 1° opção,haverá a 2°*/
+    font-family:  "roboto",cursive;
+    /*tamanho da fonte*/
     font-size: 32px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 24px;
 }
-
-.about-image {
-    float: left; /*Alinha a imagem a esquerda e o texto a direita*/
-    margin: 0 20px 10px 0; /*o topo, 20 direita, 10 baixo e 0 esquerda*/
-    width: 200px; /*largura*/
-    height: auto; /*evita a distorçao da imagem*/
+.about-image{
+    /*alinha a imagem a esquerda*/
+    float: left;
+    margin: 0 20px 10px 0; /*0 Topo, 20 direita ,10 baixo e 0 a esquerda*/
+    /*diminuir os tamanhos das imagens*/
+    /*largura*/
+    width: 200px;
+    /*Evita a distorção da imagem*/
+    height: auto;
+}
+.about-description{
+    /*utiliza a varialvel de cor no root*/
+    color: var(--gray);
+    /*justifica o texto dexando retinho.*/
+    text-align: justify;
 }
 
-.about-description {
-    color: var(--gray); /*utiliza variavel de cor criando no root*/
-    text-align: justify; /*justificaa o texto*/
+.main-footer{
+    /*Aplicar cor no fundo no rodapé*/
+    background-color: var(--skyblue);
+    /*cria um espaçamento no seu objeto do footer*/
+    /*Primeiro cima baixo,depois a esq e dir*/
+    padding: 15px 0;
 }
-
-/*Footer*/
-.main-footer {
-    background-color: var(--skyblue); /*aplica cor no fundo do rodapé*/
-    padding: 15px 0; /*aplica o espaçamento 15px cima/baixo e 0 esquerda/direita*/
+.main-footer-container{
+    /*Deixa o elemento flexível*/
+    display: flex;
+    /*Alinha os itens no centro do Elemento*/
+    align-items: center;
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
+    justify-content: space-between;
 }
-
-.footer-container {
-    display: flex; /*deixar tudo na mesma linha*/
-    align-items: center; /* alinha todos os elementos*/
-    justify-content:space-between /* colar nome de um lado e lista de icones do outro*/
+.title-smaller{
+    /*Muda a fonte do seu site*/
+    font-family: "Raleway", sans-serif;
+    /*Aplica a cor nas letras usando a variável*/
+    color: var(--blue); 
+    /*Aumenta o tamanho da fonte*/
+    font-size: 26px;/
 }
-
-.title-smaller {
-    font-family: "Raleway", sans-serif; /* pegar a fonte importada*/
-    color: var(--blue); /*aplica cor com a variavel criada no root no CSS*/
-    font-size: 26px; /*aumenta o tamanho da fonte*/
-
+.list-container{
+    /*Abre a disponibilidade de espaço no site*/
+    display: flex;
+    /*Alinha os objetos no centro*/
+    align-items: center;
+    /*COLOCAR O NOME DO LADO E LISTA DE ÍCONES DO OUTRO*/
+    justify-content: space-between;
 }
-
-
-.footer-item { 
+.footer-item{
     width: 50px;
     height: 50px;
-    padding: 15px 0; /*aplica espaçamento 15px cima/baixo e 0 esquerda/direita*/
+    padding: 15px 0;
 }
-
-.footer-item + .footer-item {
-    margin-left: 16px; /*Aplica na mesma class seguindo em diante, ate chegar seguindo em um elemento pai*/
+.footer-item + .footer-item{
+    /*Aplicana mesma class seguindo a diante, ate chegar em um elemento*/
+    margin-left: 16px;
 }
-
-/* Contato*/
-
 .contact-text {
-    text-align: center; /*Alinhha o texto*/
-    margin-bottom: 30px; /*Separa o paragrafo do formulário*/
-    font-size: 28px; /* Altera o tamanho da fonte*/
-    color: var(--gray); /*altera a cor do texto*/
+    /*Alinhha o texto*/
+    text-align: center; 
+     /*Separa o paragrafo do formulário*/
+    margin-bottom: 30px;
+    /* Altera o tamanho da fonte*/
+    font-size: 28px; 
+    /*altera a cor do texto*/
+    color: var(--gray); 
 }
 
 .contact{
-    background-color: var(--skyblue); /* cor do fundo do formulario*/
-    padding: 30px; /*espaçamento*/
-    max-width: 600px; /*tamanho frfinifo para o projeto*/
-    margin-right: auto; /*empura para direita*/
-    margin-left: auto; /*empura para esquerda*/
-    margin-bottom: 20px; /*espaçamento  para baixo*/
+    /* cor do fundo do formulario*/
+    background-color: var(--skyblue); 
+    /*espaçamento*/
+    padding: 30px; 
+    /*tamanho frfinifo para o projeto*/
+    max-width: 600px; 
+    /*empura para direita*/
+    margin-right: auto; 
+    /*empura para esquerda*/
+    margin-left: auto; 
+    /*espaçamento  para baixo*/
+    margin-bottom: 20px; 
 }
 
 .contact-label{
-    display: block; /*coloca os elementos um em cima do outro*/
-    margin-bottom: 20px; /*espaçamento  para baixo*/
-    color: var(--blue); /*altera a cor do texto*/
+     /*coloca os elementos um em cima do outro*/
+    display: block;
+    /*espaçamento  para baixo*/
+    margin-bottom: 20px; 
+     /*altera a cor do texto*/
+    color: var(--blue);
 }
 
 .contact-field {
-    display:block; /*coloca os elementos um em cima do outro*/
-    width: 100%; /*ocupa o mespaço maximo disponivel*/
-    height: 30px; /* aumenta a altura do campo*/
-    font-size: 16px; /* Altera o tamanho da fonte*/
-    padding-left: 10px; /* empurra o elemento de dento do campo para a esquerda*/
-    border: none; /*Remove a borda*/
+    /*coloca os elementos um em cima do outro*/
+    display:block; 
+    /*ocupa o mespaço maximo disponivel*/
+    width: 100%; 
+    /* aumenta a altura do campo*/
+    height: 30px; 
+    /* Altera o tamanho da fonte*/
+    font-size: 16px; 
+    /* empurra o elemento de dento do campo para a esquerda*/
+    padding-left: 10px; 
+    /*Remove a borda*/
+    border: none; 
 }
-.contact-field:focus { /*Troca a cor do fundo da area do formulário ao clicar*/
-    background-color: var(--silver); /* cor do fundo */
-    outline: none; /*remove a linha interna do campo do formulário*/
+
+/*Troca a cor do fundo da area do formulário ao clicar*/
+.contact-field:focus { 
+    /* cor do fundo */
+    background-color: var(--silver); 
+    /*remove a linha interna do campo do formulário*/
+    outline: none; 
 }
+
 textarea.contact-field {
-    height: 150px; /* aumenta a altura do campo*/
-    padding: 10px; /*espaçamento em todas as direçoes*/
-    font-family: "Roboto", calibri; /* Utiliza fonte importada, caso caso ele não encontre ultiliza a secundaria*/
+    /* aumenta a altura do campo*/
+    height: 150px; 
+    /*espaçamento em todas as direçoes*/
+    padding: 10px; 
+    /* Utiliza fonte importada, caso caso ele não encontre ultiliza a secundaria*/
+    font-family: "Roboto", calibri; 
 }
+
 .button-form {
-    background-color: var(--blue); /*cor do fundo do botão*/
-    color: var(--white); /*cor da fonte  botão*/
-    border: 2px solid var(--blue); /* Adiciona borda ao botão*/
-    border-radius: 10px; /* Arredonda as bordas do botão*/
-    padding: 2px 6px; /* aumenta o botão 2 para cima/baixo e 6 esquerda/direita*/
-    font-weight: bold; /* aumenta o peso da fonte, deixa ela mais espeça*/
-    cursor: pointer; /*modifica o cursor*/
+    /*cor do fundo do botão*/
+    background-color: var(--blue); 
+    /*cor da fonte  botão*/
+    color: var(--white); 
+     /* Adiciona borda ao botão*/
+    border: 2px solid var(--blue);
+    /* Arredonda as bordas do botão*/
+    border-radius: 10px; 
+    /* aumenta o botão 2 para cima/baixo e 6 esquerda/direita*/
+    padding: 2px 6px; 
+    /* aumenta o peso da fonte, deixa ela mais espeça*/
+    font-weight: bold; 
+    /*modifica o cursor*/
+    cursor: pointer; 
 }
+
 .button-form:hover {
-    background-color: var(--white); /*cor do fundo do botão*/
-    color: var(--blue); /*cor da fonte  botão*/
+    /*cor do fundo do botão*/
+    background-color: var(--white); 
+    /*cor da fonte  botão*/
+    color: var(--blue); 
 }
+
 .contact-maps {
     width: 600px;
-    margin-right:auto; /*empura para direita*/
-    margin-left: auto; /*empura para esquerda*/
-    padding-bottom: 20px;  /*empurra o mapa para baixo*/
+    /*empura para direita*/
+    margin-right:auto; 
+    /*empura para esquerda*/
+    margin-left: auto; 
+    /*empurra o mapa para baixo*/
+    padding-bottom: 20px;  
+
 }
