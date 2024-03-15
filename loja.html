@@ -179,25 +179,55 @@
 
         <section>
             <h2 class="title-median">Carrinho</h2>
-            <table>
+            <table class="cart-table">
                 <thead>
                     <tr>
-                        <th>Item</th>
-                        <th>Preço</th>
-                        <th>Quantidade</th>
+                        <th class="table-head-item first-col">Item</th>
+                        <th class="table-head-item second-col">Preço</th>
+                        <th class="table-head-item third-col">Quantidade</th>
                     </tr>    
                 </thead>
+                
+                <tbody><!--Corpo da tabela-->
+                    <tr class="cart-product"><!--Linha da tabela-->
+                        <td class="product-identification"> <!--coluna-->
+                            <img class="card-product-image" src="images/meia-preta.jpeg" alt="Meia-Preta">
+                            <strong class="card-product-title">meia-preta</strong>
+                        </td>
+                        <td>
+                            <span class="cart-product-price">129,99</span>
+                        </td>
+                        <td>
+                            <input type="number" value="2" min="0">
+                            <button class="remove-product-button" type="button">Remover</button>
+                        </td>
+                    </tr>
 
-                <tfoot>
+                    <tr class="cart-product"><!--Linha da tabela-->
+                        <td class="product-identification"> <!--coluna-->
+                            <img class="card-product-image" src="images/toca-kit.jpeg" alt="Toca kit">
+                            <strong class="card-product-title">kit touca</strong>
+                        </td>
+                        <td><!--coluna-->
+                            <span class="cart-product-price">129,99</span>
+                        </td>
+                        <td><!--coluna-->
+                            <input class="product-qnt-input" type="number" value="1" min="0">
+                            <button class="remove-product-button" type="button">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+                <tfoot><!--Rodapé da tabela-->
                     <tr>
-                        <td colspan="3">
+                        <td  class="cart-total-container" colspan="3">
                             <strong>Total</strong>
-                            <span>0,00</span>
+                            <span>389,97</span>
                         </td>
                     </tr>
                 </tfoot>
             </table>
-    <button type="button">Finalizar compra</button>
+    <button class="purchase-button" type="button">Finalizar compra</button>
 
         </section>
 

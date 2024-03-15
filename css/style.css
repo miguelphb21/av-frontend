@@ -348,6 +348,23 @@ textarea.contact-field {
 }
 .button-hover:hover{
     background-color: transparent;
-
-
+}
+.cart-table{
+    width: 100%;
+    border-collapse: collapse;
+    padding-bottom: 6px;
+    /*Transforma a letra em MAIÚSCULO*/
+    text-transform: uppercase;
+}
+.table-head-item{
+/*Localiza as palavras no inicio do bloco*/
+text-align: start;
+/*Cria uma linha abaixo do Elemento com a variável*/
+border-bottom: 1px solid var(--darkgray); 
+/*Cria um colapso com os elementos dentro do bloco*/
+border-collapse: collapse;
+/*Dá um espaço dentro do bloco mas na parte inferior*/
+padding-bottom: 6px;
+/*Transforma a letra em MAIÚSCULO*/
+text-transform: uppercase;
 }
