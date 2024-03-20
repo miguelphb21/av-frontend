@@ -60,6 +60,7 @@ li{
     /*Muda a cor da letra*/
     color: #00008B;
 }
+
 hr{
     /*Faz a linha ocupar 100% da horizontal do site*/
     width: 100%;
@@ -137,7 +138,7 @@ hr{
     /*Aumenta o tamanho da fonte*/
     font-size: 26px;/
 }
-.footer-container{
+.list-container{
     /*Abre a disponibilidade de espaço no site*/
     display: flex;
     /*Alinha os objetos no centro*/
@@ -357,16 +358,16 @@ textarea.contact-field {
     text-transform: uppercase;
 }
 .table-head-item{
-/*Localiza as palavras no inicio do bloco*/
-text-align: start;
-/*Cria uma linha abaixo do Elemento com a variável*/
-border-bottom: 1px solid var(--darkgray); 
-/*Cria um colapso com os elementos dentro do bloco*/
-border-collapse: collapse;
-/*Dá um espaço dentro do bloco mas na parte inferior*/
-padding-bottom: 6px;
-/*Transforma a letra em MAIÚSCULO*/
-text-transform: uppercase;
+    /*Localiza as palavras no inicio do bloco*/
+    text-align: start;
+    /*Cria uma linha abaixo do Elemento com a variável*/
+    border-bottom: 1px solid var(--darkgray); 
+    /*Cria um colapso com os elementos dentro do bloco*/
+    border-collapse: collapse;
+    /*Dá um espaço dentro do bloco mas na parte inferior*/
+    padding-bottom: 6px;
+    /*Transforma a letra em MAIÚSCULO*/
+    text-transform: uppercase;
 }
 .second-col, .third-col{
     /*fazer a segunda e a terceira coluna ocuparem o mesmo tamanho*/
@@ -401,7 +402,7 @@ text-transform: uppercase;
 .remove-product-button{
     background-color: var(--red);
     color: var(--white);
-    border-style: 0;
+    border-style: none;
     border-radius: 5px;
     padding: 4px;
     margin-left: 5px;
@@ -433,4 +434,25 @@ text-transform: uppercase;
 }
 .purchase-button:hover{
     filter: brightness(0.8);
+}
+
+/*Responsividade*/
+
+@media(max-width:  725px){
+    .main-footer-container{
+        flex-direction: column;
+    }
+}
+@media(max-width: 425px){
+    .nav-item img{
+        width: 100px;
+        height: 100px;
+    }
+    .title-header{
+        font-size: 28px;
+        text-align: center;
+    }
+    .title-smaller{
+        text-align: center;
+    }
 }
