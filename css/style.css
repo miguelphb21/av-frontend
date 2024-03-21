@@ -437,12 +437,13 @@ textarea.contact-field {
 }
 
 /*Responsividade*/
-
+/*Tablet*/
 @media(max-width:  725px){
     .main-footer-container{
         flex-direction: column;
     }
 }
+/*Mobile*/
 @media(max-width: 425px){
     .nav-item img{
         width: 100px;
@@ -454,5 +455,11 @@ textarea.contact-field {
     }
     .title-smaller{
         text-align: center;
+    }
+}
+/*Mobile S*/
+@media(max-width: 320px){
+    .header-list-container{
+        font-size: 17px;
     }
 }
