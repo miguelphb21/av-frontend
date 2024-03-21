@@ -475,6 +475,14 @@ textarea.contact-field {
         font-size: 24px;
     }
 }
+@media(max-width: 590px){
+    .product-identification{
+        flex-direction: column;
+    }
+    .product-qnt-input{
+        display: block;
+    }
+}
 
          /*560 px*/
 @media(max-width: 560px){
@@ -550,6 +558,7 @@ textarea.contact-field {
     }
     
 }
+         /*375 px*/
 @media(max-width:375px){
     .about-image{
         width: 160px;
