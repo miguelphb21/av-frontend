@@ -267,7 +267,7 @@ textarea.contact-field {
     /*Espaçamento inferior*/
     padding-bottom: 10px;
 }
-.title-larger{
+.title-large{
     /*utiliza a fonte importada do google fonts*/
     font-family: "Rock Salt", cursive;
     /*Altera o tamanho das letras*/
@@ -321,6 +321,11 @@ textarea.contact-field {
     height: 320px;
     /*Aplica um espaço abaixo da imagem*/
     margin-bottom: 20px;
+}
+.product-description{
+    text-align: center;
+    font-size: 15px;
+    font-family: "Raleway", sans-serif;
 }
 .product-price-container{
     /*Ocupar 100% do espaço*/
@@ -480,7 +485,9 @@ textarea.contact-field {
         flex-direction: column;
     }
     .product-qnt-input{
-        display: block;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -496,20 +503,22 @@ textarea.contact-field {
          /*500 px*/
 }
  
-@media(max-width: 500px){
-    .title-header{
-        font-size: 30px;
+ /*500*/
+ @media (max-width: 500px) {
+    .title-header {
+       font-size: 30px;
+       text-align: center;
     }
-    .title-large{
-        font-size: 26px
+    .title-large {
+       font-size: 26px;   
     }
-    .title-median{
-        font-size: 18px;
+    .title-median {
+       font-size: 18px;   
     }
-    .title-smaller{
-        font-size: 22px;
+    .title-smaller {
+       font-size: 22px;
     }
-}
+ }
 
 /*----------Mobile----------*/
          /*425 px*/
@@ -527,38 +536,39 @@ textarea.contact-field {
     }
 }
 
-         /*405 px*/
-@media(max-width:405px){
+ /*405 px*/
+@media (max-width: 405px) {
+   .nav-item img {
+      width: 80px;
+      height: 80px;
+   }
 
-    .nav-item img{
-        width: 80px;
-        height: 80px;
-    }
-    .header-list-container{
-        font-size: 18px;
-    }
-    .description{
-        font-size: 19px;
-        font-family:"Madimi One", cursive ;
-    }
-    .title-median{
-        font-size: 26px;
-    }
-    .title-smaller{
-        font-size: 17px;
-    }
-    .product-container{
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+   .header-list-container {
+      font-size: 18px;
+   }
 
-    }
-    .product-image{
-        width:315px;
-    }
-    
+   .description {
+      font-size: 19px;
+      font-family: "Madimi One", cursive;
+   }
+
+   .title-median {
+      font-size: 26px;   
+   }
+   .title-smaller {
+      font-size: 17px;
+   }
+
+   .product-container{
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .product-image {
+      width: 315px;
+   }
 }
-         /*375 px*/
+ /*375 px*/
 @media(max-width:375px){
     .about-image{
         width: 160px;
